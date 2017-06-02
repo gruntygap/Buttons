@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	background-color:#5F9C98;
+	text-align: center;
+}
+
+h1 {
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    outline-style: dashed;
+    outline-color: cyan;
+    text-shadow: #1B7787;
+}
+.buttons {
+	background-color:#CC91AD;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
+.colorView {
+	background-color: aliceblue;
+	padding: 50px, 50px;
+}
+
+#blueButton {
+	background-color:#2AB4CC; /* Green */
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:underline;
+    display: inline-block;
+    font-size: 26px;
+}
+
+#blueButton:hover {
+	background-color: #1B7787;
+}
+
+#greenButton {
+	background-color:#36FFAD; /* Green */
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:underline;
+    display: inline-block;
+    font-size: 26px;
+}
+
+#greenButton:hover {
+	background-color: #1F855B;
+}
+
+#redButton {
+	background-color:#FF7775; /* Green */
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:underline;
+    display: inline-block;
+    font-size: 26px;
+}
+
+#redButton:hover {
+	background-color: #7F3635;
+}
+
+#redButton:hover, #blueButton:hover, #greenButton:hover {
+    transition-duration: 0.4s;
+}
