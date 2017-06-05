@@ -23,6 +23,22 @@
         {% endfor %}
       </ul>
     </div>
+    <div id="demo">
+        <h2>Let AJAX change this text</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "requirements.txt", true);
+            xhttp.send();
+        }
+    </script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   </body>

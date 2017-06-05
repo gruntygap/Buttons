@@ -6,7 +6,7 @@ app = Flask(__name__)
 def template_test():
     my_list = []
     for x in range(0, 100):
-        my_list.extend(str(x))
+        my_list.append(x)
 
     return render_template('template.html', my_string="Wheeeee!", my_list = my_list)
 
