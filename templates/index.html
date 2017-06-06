@@ -11,10 +11,10 @@
 <body>
 <!-- Content Section Start -->
 <h1>Buttons.</h1>
-<div class="buttons">
-    <button id="redButton">Red</button>
-    <button id="greenButton">Green</button>
-    <button id="blueButton">Blue</button>
+<div class="buttonView">
+    <button id="red" class="buttons">Red</button>
+    <button id="green" class="buttons">Green</button>
+    <button id="blue" class="buttons">Blue</button>
 </div>
 <div class="colorView"><br /></div>
 <div>
@@ -25,15 +25,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $("#redButton").click(function(){
-            $.ajax({url: "/get_color", success: function(result){
+        $(".buttons").click(function(){
+            alert(this)
+            $.ajax({url: "/get_color", data: {"key": "red"}, success: function(result){
                 alert(result);
                 var color = $("#redButton").css("background-color");
                 $("#textValue").html(result);
                 $(".colorView").css("background-color", result);
             }});
         });
-        $("#greenButton").click(function(){
+        /*$("#greenButton").click(function(){
             $.ajax({url: "/get_color", success: function(result){
                 var color = $("#greenButton").css("background-color");
                 $("#textValue").html(color);
@@ -47,7 +48,7 @@
                 $(".colorView").css("background-color", color);
 
             }});
-        });
+        }); */
     });
 </script>
 </body>

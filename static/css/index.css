@@ -11,7 +11,7 @@ h1 {
     outline-color: #003A7F;
     text-shadow: #1B7787;
 }
-.buttons {
+.buttonView {
 	background-color:#8AC0FF;
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     padding: 100px;
@@ -21,8 +21,7 @@ h1 {
 	background-color: aliceblue;
 }
 
-#blueButton {
-    background-color: #2AB4CC;
+.buttons {
     border: none;
     color: white;
     padding: 15px 32px;
@@ -32,40 +31,30 @@ h1 {
     font-size: 26px;
 }
 
-#blueButton:hover {
+#blue {
+    background-color: #2AB4CC;
+}
+
+#blue:hover {
 	background-color: #1B7787;
 }
 
-#greenButton {
+#green {
 	background-color:#36FFAD;
-    border:none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration:underline;
-    display: inline-block;
-    font-size: 26px;
 }
 
-#greenButton:hover {
+#green:hover {
 	background-color: #1F855B;
 }
 
-#redButton {
+#red {
 	background-color:#FF7775;
-    border:none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration:underline;
-    display: inline-block;
-    font-size: 26px;
 }
 
-#redButton:hover {
+#red:hover {
 	background-color: #7F3635;
 }
 
-#redButton:hover, #blueButton:hover, #greenButton:hover {
+#red:hover, #blue:hover, #green:hover {
     transition-duration: 1.6s;
 }
