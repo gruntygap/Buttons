@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Buttons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}" media="screen" /> -->
-    <link rel="stylesheet" type="text/css" href="static/css/index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}" media="screen" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='css/favicon.ico')}}" />
 </head>
 
@@ -17,11 +16,9 @@
     <button id="greenButton">Green</button>
     <button id="blueButton">Blue</button>
 </div>
-<br/>
-<br/>
-<div class="colorView"><br /><br /><br /><br /><br /><br /><br/></div>
+<div class="colorView"><br /></div>
 <div>
-    <h2 id="div1">Color RGB Value</h2>
+    <h2 id="textValue">Color RGB Value</h2>
 </div>
 
 <!-- Scripts Section Start -->
@@ -31,23 +28,25 @@
 <script>
     $(document).ready(function(){
         $("#redButton").click(function(){
-            $.ajax({url: "static/css/ajax_info.txt", success: function(result){
+            //$.ajax({url: "static/css/ajax_info.txt", success: function(result){
+            $.ajax({url: "/get_red_color", success: function(result){
+                alert(result);
                 var color = $("#redButton").css("background-color");
-                $("#div1").html(color);
-                $(".colorView").css("background-color", color);
+                $("#textValue").html(result);
+                $(".colorView").css("background-color", result);
             }});
         });
         $("#greenButton").click(function(){
             $.ajax({url: "static/css/ajax_info.txt", success: function(result){
                 var color = $("#greenButton").css("background-color");
-                $("#div1").html(color);
+                $("#textValue").html(color);
                 $(".colorView").css("background-color", color);
             }});
         });
         $("#blueButton").click(function(){
             $.ajax({url: "static/css/ajax_info.txt", success: function(result){
                 var color = $("#blueButton").css("background-color");
-                $("#div1").html(color);
+                $("#textValue").html(color);
                 $(".colorView").css("background-color", color);
 
             }});
