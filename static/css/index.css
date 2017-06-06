@@ -18,13 +18,15 @@ h1 {
 }
 
 .colorView {
-	background-color: aliceblue;
+    background-color: aliceblue;
+    margin: 50px;
+    padding: 5%;
 }
-
 .buttons {
     border: none;
     color: white;
     padding: 15px 32px;
+    margin: 4%;
     text-align: center;
     text-decoration: underline;
     display: inline-block;

@@ -6,6 +6,12 @@ app = Flask(__name__)
 def buttons():
     return render_template('index.html')
 
+
+@app.route("/buttons_v2")
+def buttons_v2():
+    return render_template('buttons_v2.html')
+
+
 @app.route("/get_color")
 def get_color():
     pass_in = request.args
