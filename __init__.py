@@ -8,5 +8,13 @@ def buttons():
 
 @app.route("/get_color")
 def get_color():
-    passIn = request.args
-    return passIn.get("key", "null")
+    pass_in = request.args
+    if pass_in.get("key", "null") == "red":
+        color = 'tomato'
+    elif pass_in.get("key", "null") == "green":
+        color = 'forestgreen'
+    elif pass_in.get("key", "null") == 'blue':
+        color = 'aqua'
+    else:
+        color = 'No Color fit the parameter'
+    return color

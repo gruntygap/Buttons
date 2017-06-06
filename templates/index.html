@@ -26,9 +26,7 @@
 <script>
     $(document).ready(function(){
         $(".buttons").click(function(){
-            alert(this)
-            $.ajax({url: "/get_color", data: {"key": "red"}, success: function(result){
-                alert(result);
+            $.ajax({url: "/get_color", data: {"key": this.id.valueOf()}, success: function(result){
                 var color = $("#redButton").css("background-color");
                 $("#textValue").html(result);
                 $(".colorView").css("background-color", result);
