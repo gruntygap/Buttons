@@ -27,26 +27,10 @@
     $(document).ready(function(){
         $(".buttons").click(function(){
             $.ajax({url: "/get_color", data: {"key": this.id.valueOf()}, success: function(result){
-                var color = $("#redButton").css("background-color");
                 $("#textValue").html(result);
                 $(".colorView").css("background-color", result);
             }});
         });
-        /*$("#greenButton").click(function(){
-            $.ajax({url: "/get_color", success: function(result){
-                var color = $("#greenButton").css("background-color");
-                $("#textValue").html(color);
-                $(".colorView").css("background-color", color);
-            }});
-        });
-        $("#blueButton").click(function(){
-            $.ajax({url: "/get_color", success: function(result){
-                var color = $("#blueButton").css("background-color");
-                $("#textValue").html(color);
-                $(".colorView").css("background-color", color);
-
-            }});
-        }); */
     });
 </script>
 </body>
