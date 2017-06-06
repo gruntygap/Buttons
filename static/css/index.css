@@ -1,33 +1,33 @@
 @charset "UTF-8";
 /* CSS Document */
 * {
-	background-color:#5F9C98;
+	background-color: #D6E9FF;
 	text-align: center;
 }
 
 h1 {
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
     outline-style: dashed;
-    outline-color: cyan;
+    outline-color: #003A7F;
     text-shadow: #1B7787;
 }
 .buttons {
-	background-color:#CC91AD;
+	background-color:#8AC0FF;
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    padding: 100px;
 }
 
 .colorView {
 	background-color: aliceblue;
-	padding: 50px, 50px;
 }
 
 #blueButton {
-	background-color:#2AB4CC; /* Green */
-    border:none;
+    background-color: #2AB4CC;
+    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration:underline;
+    text-decoration: underline;
     display: inline-block;
     font-size: 26px;
 }
@@ -37,7 +37,7 @@ h1 {
 }
 
 #greenButton {
-	background-color:#36FFAD; /* Green */
+	background-color:#36FFAD;
     border:none;
     color: white;
     padding: 15px 32px;
@@ -52,7 +52,7 @@ h1 {
 }
 
 #redButton {
-	background-color:#FF7775; /* Green */
+	background-color:#FF7775;
     border:none;
     color: white;
     padding: 15px 32px;
@@ -67,5 +67,5 @@ h1 {
 }
 
 #redButton:hover, #blueButton:hover, #greenButton:hover {
-    transition-duration: 0.4s;
+    transition-duration: 1.6s;
 }

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}" media="screen" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='css/favicon.ico')}}" />
+</head>
+
+<body>
+<!-- Content Section Start -->
+<h1>Buttons.</h1>
+<div class="buttons">
+    <button id="redButton">Red</button>
+    <button id="greenButton">Green</button>
+    <button id="blueButton">Blue</button>
+</div>
+<div class="colorView"><br /></div>
+<div>
+    <h2 id="textValue">Color RGB Value</h2>
+</div>
+
+<!-- Scripts Section Start -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#redButton").click(function(){
+            //$.ajax({url: "static/css/ajax_info.txt", success: function(result){
+            $.ajax({url: "/get_red_color", success: function(result){
+                alert(result);
+                var color = $("#redButton").css("background-color");
+                $("#textValue").html(result);
+                $(".colorView").css("background-color", result);
+            }});
+        });
+        $("#greenButton").click(function(){
+            $.ajax({url: "static/css/ajax_info.txt", success: function(result){
+                var color = $("#greenButton").css("background-color");
+                $("#textValue").html(color);
+                $(".colorView").css("background-color", color);
+            }});
+        });
+        $("#blueButton").click(function(){
+            $.ajax({url: "static/css/ajax_info.txt", success: function(result){
+                var color = $("#blueButton").css("background-color");
+                $("#textValue").html(color);
+                $(".colorView").css("background-color", color);
+
+            }});
+        });
+    });
+</script>
+</body>
+</html>
