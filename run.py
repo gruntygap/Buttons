@@ -8,7 +8,7 @@ def template_test():
     for x in range(0, 100):
         my_list.append(x)
 
-    return render_template('template.html', my_string="Wheeeee!", my_list = my_list)
+    return render_template('index.html', my_string="Wheeeee!", my_list = my_list)
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 * {
-	background-color:#5F9C98;
+	background-color:#FF7775;
 	text-align: center;
 }
 
@@ -18,11 +18,13 @@ h1 {
 
 .colorView {
 	background-color: aliceblue;
-	padding: 50px, 50px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
 }
 
 #blueButton {
-	background-color:#2AB4CC; /* Green */
+	background-color:#2AB4CC;
     border:none;
     color: white;
     padding: 15px 32px;
@@ -37,7 +39,7 @@ h1 {
 }
 
 #greenButton {
-	background-color:#36FFAD; /* Green */
+	background-color:#36FFAD;
     border:none;
     color: white;
     padding: 15px 32px;
@@ -52,7 +54,7 @@ h1 {
 }
 
 #redButton {
-	background-color:#FF7775; /* Green */
+	background-color:#FF7775;
     border:none;
     color: white;
     padding: 15px 32px;
@@ -67,5 +69,5 @@ h1 {
 }
 
 #redButton:hover, #blueButton:hover, #greenButton:hover {
-    transition-duration: 0.4s;
+    transition-duration: 10s;
 }
