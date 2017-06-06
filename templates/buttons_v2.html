@@ -2,26 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Buttons</title>
+    <title>Buttons v2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/buttons_v2.css')}}" media="screen" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='resources/favicon.ico')}}" />
 </head>
 
 <body>
 <!-- Content Section Start -->
 <div>
-    <h1>Buttons.</h1>
-    <a href="/buttons_v2"><p>Or something different</p></a>
+    <h1>Buttons v2.</h1>
+    <a href="/buttons"><p>Or something different</p></a>
 </div>
 <div class="buttonView">
-    <button id="red" class="buttons">Red</button>
-    <button id="green" class="buttons">Green</button>
-    <button id="blue" class="buttons">Blue</button>
+    <button id="red" class="buttons">Click Me</button>
 </div>
-<div class="colorView"><br /></div>
 <div>
-    <h2 id="textValue">Color RGB Value</h2>
+    <h2>The Color Value is: <span id="textValue"></span></h2>
 </div>
 
 <!-- Scripts Section Start -->
@@ -29,9 +26,9 @@
 <script>
     $(document).ready(function(){
         $(".buttons").click(function(){
-            $.ajax({url: "/get_color", data: {"key": this.id.valueOf()}, success: function(result){
+            $.ajax({url: "/get_rand_color", success: function(result){
                 $("#textValue").html(result);
-                $(".colorView").css("background-color", result);
+                $(".buttonView").css("background-color", result);
             }});
         });
     });

@@ -1,27 +1,22 @@
 @charset "UTF-8";
 /* CSS Document */
 * {
-	background-color: #D6E9FF;
+	background-color: #FFE4D6;
 	text-align: center;
 }
 
 h1 {
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
     outline-style: dashed;
-    outline-color: #003A7F;
-    text-shadow: #1B7787;
+    outline-color: #7F5945;
+    text-shadow: #7F2B00;
 }
 .buttonView {
-	background-color:#8AC0FF;
+	background-color:#FFB28A;
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     padding: 100px;
 }
 
-.colorView {
-    background-color: aliceblue;
-    margin: 50px;
-    padding: 5%;
-}
 .buttons {
     border: none;
     color: white;
@@ -33,30 +28,11 @@ h1 {
     font-size: 26px;
 }
 
-#blue {
-    background-color: #2AB4CC;
-}
-
-#blue:hover {
-	background-color: #1B7787;
-}
-
-#green {
-	background-color:#36FFAD;
-}
-
-#green:hover {
-	background-color: #1F855B;
-}
-
 #red {
 	background-color:#FF7775;
 }
 
 #red:hover {
-	background-color: #7F3635;
-}
-
-#red:hover, #blue:hover, #green:hover {
+    background-color: #7F3635;
     transition-duration: 1.6s;
 }
